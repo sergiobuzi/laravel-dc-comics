@@ -39,7 +39,24 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // prendiamo i dati dal form
+        $data = $request -> all();
+
+        //costruiamo la nuova variabile vuota
+        $newComic = new Comic();
+
+        //assegniamo i valori alla variabile
+        $newComic -> title = $data['title'];
+        $newComic -> author = $data['author'];
+        $newComic -> price =$data['price'];
+
+        //salviamo la variabile
+        $newComic -> save();
+
+        // andiamo alla show di quella variabile
+        return redirect() -> route('users.show', $newComic ->id);
+
+
     }
 
     /**
