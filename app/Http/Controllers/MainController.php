@@ -28,7 +28,7 @@ class MainController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.create');
     }
 
     /**
@@ -50,7 +50,8 @@ class MainController extends Controller
      */
     public function show($id)
     {
-        //
+        $comic = comic :: find($id);
+        return view('pages.show', compact('comic'));
     }
 
     /**
