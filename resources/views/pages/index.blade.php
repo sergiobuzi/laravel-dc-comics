@@ -9,9 +9,20 @@
         <ul class="row d-flex justify-content-center">
             @foreach ($comics as $comic)
 
-            <li class="card col-3 p-1 m-2">   
-                <a href="{{ route('users.show', $comic ->id)}}">{{$comic -> title}}</a>
+            <li class="card col-3 p-1 m-2" >   
+                <a href="{{ route('users.show', $comic ->id)}}"><h3>{{$comic -> title}}</h3></a>
+                 <h3>{{$comic -> author}}</h3>
+                 <h4>{{$comic -> price}}$</h4>
+
+                 {{-- form per eliminare un id --}}
+                 <form action="{{ route('users.destroy', $comic ->id)}}" method="POST">
+                    @csrf
+                    @method('POST')
+
+                     <input type="submit" value="x">
+                 </form>
             </li>
+
                 
             @endforeach
         </ul>

@@ -102,6 +102,9 @@ class MainController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = comic :: find($id);
+        $comic -> delete();
+
+        return redirect() -> route('users.index');
     }
 }

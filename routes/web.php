@@ -8,7 +8,7 @@ use App\Http\Controllers\MainController;
 
 
 // rotta per l'index
-Route::get('/',[MainController::class, 'index']) -> name('users.index');
+Route::get('/',[MainController::class, 'index']) ->name('users.index');
 
 
 
@@ -25,5 +25,10 @@ Route::get('/users', [MainController::class, 'store']) ->name('users.store');
 
 // Le rotte con le variabili (in questo casi id) vanno sempre sotto tutte le altre rotte
 
+
 // creo la rotta per la show e dopo aggiungo il proprio nome per poterla richiamare nella view e utilizzarlo per il front end
 Route::get('/users/{id}', [MainController :: class, 'show']) ->name('users.show');
+
+
+//creo la rotta per la delete e gli do un nome
+Route::post('/users/{id}', [MainController::class, 'destroy']) ->name('users.destroy');
