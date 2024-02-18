@@ -17,7 +17,7 @@
                  {{-- form per eliminare un id --}}
                  <form action="{{ route('users.destroy', $comic ->id)}}" method="POST">
                     @csrf
-                    @method('POST')
+                    @method('DELETE')
 
                      <input type="submit" value="x">
                  </form>

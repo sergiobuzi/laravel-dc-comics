@@ -31,4 +31,4 @@ Route::get('/users/{id}', [MainController :: class, 'show']) ->name('users.show'
 
 
 //creo la rotta per la delete e gli do un nome
-Route::post('/users/{id}', [MainController::class, 'destroy']) ->name('users.destroy');
+Route::delete('/users/{id}', [MainController::class, 'destroy']) ->name('users.destroy');
