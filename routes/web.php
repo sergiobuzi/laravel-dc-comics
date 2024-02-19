@@ -17,7 +17,7 @@ Route::get('/users/create', [MainController::class, 'create']) ->name('users.cre
 
 
 // creo la rotta per il GET (store) e do il nome
-Route::get('/users', [MainController::class, 'store']) ->name('users.store');
+Route::get('/users/store', [MainController::class, 'store']) ->name('users.store');
 
 
 
@@ -31,4 +31,11 @@ Route::get('/users/{id}', [MainController :: class, 'show']) ->name('users.show'
 
 
 //creo la rotta per la delete e gli do un nome
-Route::delete('/users/{id}', [MainController::class, 'destroy']) ->name('users.destroy');
+Route::delete('/users/{id}/destroy', [MainController::class, 'destroy']) ->name('users.destroy');
+
+
+// creo la rotta per la edit e gli do un nome
+Route::get('users/{id}/edit', [MainController::class, 'edit']) ->name('users.edit');
+
+// creo la  rotta per l'update e gli do un nome
+Route::put('users/{id}/update', [MainController::class, 'update']) ->name('users.update');
