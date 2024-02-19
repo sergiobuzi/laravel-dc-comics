@@ -27,7 +27,7 @@
                     @csrf
                     @method('DELETE')
 
-                    <input type="submit" value="x" onclick="return confirm('confermare?');">
+                    <input type="submit" value="DELETE" onclick="return confirm('confermare?');">
                 </form>
             </li>
 

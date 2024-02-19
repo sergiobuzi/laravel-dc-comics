@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Models\comic;
 
+// collego lo storepostrequest
+use App\Http\Requests\StorePostRequest;
+
 class MainController extends Controller
 {
     /**
@@ -90,10 +93,12 @@ class MainController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StorePostRequest $request, $id)
     {
-        $data =$request -> all();
         $comic = Comic::find($id);
+
+        $data =$request -> all();
+
 
         $comic -> title = $data['title'];
         $comic -> author = $data['author'];
