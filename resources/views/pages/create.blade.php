@@ -5,6 +5,18 @@
 @section('content')
     <h1>New Comic</h1>
 
+    @if ($errors -> any())
+
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors -> all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    
+    @endif
+
     {{-- guarda web.php dove abbiamo la rotta --}}
     <form action="{{route('users.store')}}" method="GET">
         @csrf
