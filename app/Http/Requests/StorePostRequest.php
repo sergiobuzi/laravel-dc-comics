@@ -29,4 +29,14 @@ class StorePostRequest extends FormRequest
             'price' => 'required|numeric',
         ];
     }
+
+    // creo la funzione che traduca i messaggi di errore
+    public function messages()
+    {
+        return [
+            'title.min' => 'il nome non può essere minore di 3 caratteri',
+            'author.min' => 'il nome dell/autore non può essere minore di 3 caratteri',
+            'price' => 'devi insesrire un prezzo ',
+        ];
+    }
 }
