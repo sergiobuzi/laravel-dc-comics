@@ -23,13 +23,13 @@
         @method('PUT')
 
         <label for="title">Title</label>
-        <input type="text" name="title" id="title" value={{$comic -> title}}>
+        <input type="text" name="title" id="title" value="{{$comic -> title}}">
         <br>
         <label for="title">Author</label>
-        <input type="text" name="author" id="author" value={{$comic -> author}}>
+        <input type="text" name="author" id="author" value="{{$comic -> author}}">
         <br>
         <label for="title">Price</label>
-        <input type="text" name="price" id="price" value={{$comic -> price}}>
+        <input type="text" name="price" id="price" value="{{$comic -> price}}">
         <br>
         <input type="submit" value="EDIT">
     </form>
